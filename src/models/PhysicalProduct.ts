@@ -10,11 +10,11 @@ export default class PhysicalProduct extends Product{
     }
 
     displayDetails(): string {
-        return super.displayDetails() + `Weight : ${this.weight}`;
+        return super.displayDetails() + `, Weight : ${this.weight}`;
     }
 
-    override getPriceWithTax(price: number): number {
-        return price * (1 + 0.1)
+    override getPriceWithTax(): number {
+        return this.price * (1 + 0.1)
     }
 
 

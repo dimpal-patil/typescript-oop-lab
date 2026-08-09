@@ -6,28 +6,24 @@ import  sortProducts  from "./utils/productSorting";
 import calculateTax from "./utils/taxCalculate";
 
 
-const physicalProduct = new PhysicalProduct('101', 'laptop', 1200, 25);
-const digitalProduct = new DigitalProduct('102', 'charger', 300 , 34);
-
-
+const physicalProduct = new PhysicalProduct('101', 'laptop', 1200 , 21);
+const digitalProduct = new DigitalProduct('102', 'ipad', 300 , 45);
 
 //Calucate tax based on physical Product and digital product
 const products:Product[] = [physicalProduct, digitalProduct];
 for (const product of products) {
     console.log(product.displayDetails());
-
     const finalPrice = calculateTax(product);
-
     console.log(`Final price: $${finalPrice}`);
 }
 
 //Print weight in KG
-console.log(`Weight in KG: ${physicalProduct.weight}`);
+console.log(`Weight in KG: ${physicalProduct.weightInKg}`);
 
 //Print filesize
-console.log(`Formattted file size: ${digitalProduct.fileSize}`);
+console.log(`Formattted file size: ${digitalProduct.formatFileSize}`);
 
-//Apply Discount ondigital Product
+//Apply Discount on digital Product
 console.log(digitalProduct.applyDiscount(50,10));
 
 

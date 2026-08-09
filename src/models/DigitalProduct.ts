@@ -14,7 +14,7 @@ export default class DigitalProduct extends Product implements DiscountableProdu
 
 
     displayDetails(): string {
-        return super.displayDetails() + `Filesize : ${this.fileSize}`;
+        return super.displayDetails() + `, Filesize : ${this.fileSize}`;
     }
 
     get formatFileSize():string{
@@ -26,5 +26,3 @@ export default class DigitalProduct extends Product implements DiscountableProdu
     }
 
 }
-
-    
